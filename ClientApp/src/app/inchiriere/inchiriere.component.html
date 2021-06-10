@@ -1,0 +1,25 @@
+<h1 id="tableLabel">Inchiriere</h1>
+
+<p>De aici puteti inchiria echipament</p>
+
+<button class="btn btn-primary" [routerLink]="['/inchiriere-add']">Adauga inchiriere</button>
+
+<p *ngIf="!inchiriere"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="inchiriere">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Pret</th>
+      <th>Timp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let inchiriere of inchiriere">
+      <td>{{ inchiriere.id }}</td>
+      <td>{{ inchiriere.pret }}</td>
+      <td>{{ inchiriere.timp }}</td>
+      <td><button class="btn btn-primary" (click)="deleteInchiriere(inchirirere)">delete</button></td>
+    </tr>
+  </tbody>
+</table>

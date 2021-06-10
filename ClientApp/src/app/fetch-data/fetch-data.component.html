@@ -1,0 +1,24 @@
+<h1 id="tableLabel">Trasee Via Ferrata</h1>
+
+<p>Aici gasiti un top de trasee Via Ferrata din Romania</p>
+
+<p *ngIf="!forecasts"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
+  <thead>
+    <tr>
+      <th>Numele si locatia</th>
+      <th>Dificultate</th>
+      <th>Durata</th>
+      <th>Taxa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let forecast of forecasts">
+      <td>{{ forecast.date }}</td>
+      <td>{{ forecast.temperatureC }}</td>
+      <td>{{ forecast.temperatureF }}</td>
+      <td>{{ forecast.summary }}</td>
+    </tr>
+  </tbody>
+</table>
