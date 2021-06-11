@@ -1,0 +1,41 @@
+<h1 id="tableLabel">Add traseu</h1>
+
+<style>
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: darkslateblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+    input[type=submit]:hover {
+      opacity: 0.8;
+    }
+</style>
+
+<form>
+  <label for="NumeSiLocatie">Nume Si Locatie</label>
+  <input [(ngModel)]="traseu.numeSiLocatie" type="text" id="NumeSiLocatie" name="NumeSiLocatie" placeholder="Nume Si Locatie..">
+  <label for="dificultate">Dificultate</label>
+  <input [(ngModel)]="traseu.dificultate" type="text" id="dificultate" name="dificultate" placeholder="Dificultate..">
+  <label for="durata">Durata</label>
+  <input [(ngModel)]="traseu.durata" type="text" id="durata" name="durata" placeholder="Durata..">
+  <label for="taxa">Taxa</label>
+  <input [(ngModel)]="traseu.taxa" type="text" id="taxa" name="taxa" placeholder="Taxa..">
+  <input (click)="saveTraseu()" type="submit" value="Salveaza traseu">
+</form>
+

@@ -1,0 +1,26 @@
+<h1 id="tableLabel">Dificultate</h1>
+
+<p>Aici puteti adauga dificultatea</p>
+
+<p *ngIf="!dificultate"><em>Loading...</em></p>
+
+<table class='table table-dark table-striped' aria-labelledby="tableLabel" *ngIf="dificultate">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Grad</th>
+      <th>Descriere</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dificultate of dificultate">
+      <td>{{ dificultate.id }}</td>
+      <td>{{ dificultate.grad }}</td>
+      <td>{{ dificultate.descriere }}</td>
+      <td><button class="btn btn-primary" (click)="deleteDificultate(dificultate)">delete</button></td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-primary float-right" [routerLink]="['/dificultate-add']">Adauga dificultate</button>
+
+

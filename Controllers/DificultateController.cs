@@ -21,14 +21,12 @@ namespace ViaFerrata.Controllers
             _context = context;
         }
 
-        // GET: api/Dificultate
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Dificultate>>> GetDificultate()
         {
             return await _context.Dificultate.ToListAsync();
         }
 
-        // GET: api/Dificultate/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Dificultate>> GetDificultate(Guid id)
         {
@@ -42,8 +40,6 @@ namespace ViaFerrata.Controllers
             return dificultate;
         }
 
-        // PUT: api/Dificultate/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDificultate(Guid id, Dificultate dificultate)
         {
@@ -73,8 +69,6 @@ namespace ViaFerrata.Controllers
             return NoContent();
         }
 
-        // POST: api/Dificultate
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Dificultate>> PostDificultate(Dificultate dificultate)
         {
@@ -84,7 +78,6 @@ namespace ViaFerrata.Controllers
             return CreatedAtAction("GetDificultate", new { id = dificultate.ID }, dificultate);
         }
 
-        // DELETE: api/Dificultate/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDificultate(Guid id)
         {

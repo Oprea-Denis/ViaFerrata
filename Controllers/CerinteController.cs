@@ -21,14 +21,12 @@ namespace ViaFerrata.Controllers
             _context = context;
         }
 
-        // GET: api/Cerinte
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Cerinte>>> GetCerinte()
         {
             return await _context.Cerinte.ToListAsync();
         }
 
-        // GET: api/Cerinte/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Cerinte>> GetCerinte(Guid id)
         {
@@ -42,8 +40,6 @@ namespace ViaFerrata.Controllers
             return cerinte;
         }
 
-        // PUT: api/Cerinte/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCerinte(Guid id, Cerinte cerinte)
         {
@@ -73,8 +69,6 @@ namespace ViaFerrata.Controllers
             return NoContent();
         }
 
-        // POST: api/Cerinte
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Cerinte>> PostCerinte(Cerinte cerinte)
         {
@@ -84,7 +78,6 @@ namespace ViaFerrata.Controllers
             return CreatedAtAction("GetCerinte", new { id = cerinte.ID }, cerinte);
         }
 
-        // DELETE: api/Cerinte/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCerinte(Guid id)
         {

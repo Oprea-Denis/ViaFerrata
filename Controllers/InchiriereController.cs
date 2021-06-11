@@ -21,14 +21,12 @@ namespace ViaFerrata.Controllers
             _context = context;
         }
 
-        // GET: api/Inchiriere
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Inchiriere>>> GetInchiriere()
         {
             return await _context.Inchiriere.ToListAsync();
         }
 
-        // GET: api/Inchiriere/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Inchiriere>> GetInchiriere(Guid id)
         {
@@ -42,7 +40,6 @@ namespace ViaFerrata.Controllers
             return inchiriere;
         }
 
-        // PUT: api/Inchiriere/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutInchiriere(Guid id, Inchiriere inchiriere)
         {
@@ -72,7 +69,6 @@ namespace ViaFerrata.Controllers
             return NoContent();
         }
 
-        // POST: api/Inchiriere
         [HttpPost]
         public async Task<ActionResult<Inchiriere>> PostInchiriere(Inchiriere inchiriere)
         {
@@ -82,7 +78,6 @@ namespace ViaFerrata.Controllers
             return CreatedAtAction("GetInchiriere", new { id = inchiriere.ID }, inchiriere);
         }
 
-        // DELETE: api/Inchiriere/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteInchiriere(Guid id)
         {

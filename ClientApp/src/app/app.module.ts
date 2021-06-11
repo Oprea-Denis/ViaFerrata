@@ -6,27 +6,49 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { TraseuComponent } from './traseu/traseu.component';
+import { TraseuAddComponent } from './traseu/traseu-add.component';
+import { InchiriereComponent } from './inchiriere/inchiriere.component';
+import { InchiriereAddComponent } from './inchiriere/inchiriere-add.component';
+import { DificultateComponent } from './dificultate/dificultate.component';
+import { DificultateAddComponent } from './dificultate/dificultate-add.component';
+import { CerinteComponent } from './cerinte/cerinte.component';
+import { CerinteAddComponent } from './cerinte/cerinte-add.component';
+import { ExperientaComponent } from './experienta/experienta.component';
+import { ExperientaAddComponent } from './experienta/experienta-add.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
-    HomeComponent,
-    CounterComponent,
-    FetchDataComponent
+    TraseuComponent,
+    TraseuAddComponent,
+    InchiriereComponent,
+    InchiriereAddComponent,
+    DificultateComponent,
+    DificultateAddComponent,
+    CerinteComponent,
+    CerinteAddComponent,
+    ExperientaComponent,
+    ExperientaAddComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-    ])
+      { path: 'traseu', component: TraseuComponent },
+      { path: 'traseu-add', component: TraseuAddComponent },
+      { path: 'inchiriere', component: InchiriereComponent },
+      { path: 'inchiriere-add', component: InchiriereAddComponent },
+      { path: 'dificultate', component: DificultateComponent },
+      { path: 'dificultate-add', component: DificultateAddComponent },
+      { path: 'cerinte', component: CerinteComponent },
+      { path: 'cerinte-add', component: CerinteAddComponent },
+      { path: 'experienta', component: ExperientaComponent },
+      { path: 'experienta-add', component: ExperientaAddComponent },
+    ], { relativeLinkResolution: 'legacy' })
   ],
   providers: [],
   bootstrap: [AppComponent]

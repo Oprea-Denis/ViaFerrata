@@ -21,14 +21,12 @@ namespace ViaFerrata.Controllers
             _context = context;
         }
 
-        // GET: api/Experienta
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Experienta>>> GetExperienta()
         {
             return await _context.Experienta.ToListAsync();
         }
 
-        // GET: api/Experienta/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Experienta>> GetExperienta(Guid id)
         {
@@ -42,8 +40,6 @@ namespace ViaFerrata.Controllers
             return experienta;
         }
 
-        // PUT: api/Experienta/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutExperienta(Guid id, Experienta experienta)
         {
@@ -73,8 +69,6 @@ namespace ViaFerrata.Controllers
             return NoContent();
         }
 
-        // POST: api/Experienta
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Experienta>> PostExperienta(Experienta experienta)
         {
@@ -84,7 +78,6 @@ namespace ViaFerrata.Controllers
             return CreatedAtAction("GetExperienta", new { id = experienta.ID }, experienta);
         }
 
-        // DELETE: api/Experienta/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteExperienta(Guid id)
         {

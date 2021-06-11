@@ -1,0 +1,29 @@
+<h1 id="tableLabel">Experienta</h1>
+
+<p>Aici puteti adauga experienta</p>
+
+<p *ngIf="!experienta"><em>Loading...</em></p>
+
+<table class='table table-dark table-striped' aria-labelledby="tableLabel" *ngIf="experienta">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nume</th>
+      <th>Varsta</th>
+      <th>Trasee Parcurse</th>
+      <th>Dificultate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let experienta of experienta">
+      <td>{{ experienta.id }}</td>
+      <td>{{ experienta.nume }}</td>
+      <td>{{ experienta.varsta }}</td>
+      <td>{{ experienta.traseeParcurse }}</td>
+      <td>{{ experienta.dificultate }}</td>
+      <td><button class="btn btn-primary" (click)="deleteExperienta(experienta)">delete</button></td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-primary float-right" [routerLink]="['/experienta-add']">Adauga experienta</button>
+

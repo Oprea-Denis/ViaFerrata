@@ -1,0 +1,37 @@
+<h1 id="tableLabel">Add inchiriere</h1>
+
+<style>
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: darkslateblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+    input[type=submit]:hover {
+      opacity: 0.8;
+    }
+</style>
+
+<form>
+  <label for="pret">Pret</label>
+  <input [(ngModel)]="inchiriere.pret" type="text" id="pret" name="pret" placeholder="Pret..">
+  <label for="timp">Timp</label>
+  <input [(ngModel)]="inchiriere.timp" type="text" id="timp" name="timp" placeholder="Timp..">
+  <input (click)="saveInchiriere()" type="submit" value="Salveaza inchiriere">
+</form>
+

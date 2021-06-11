@@ -3,7 +3,7 @@
     class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3"
   >
     <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']">ViaFerrata</a>
+      <a class="navbar-brand" [routerLink]="['/traseu']">ViaFerrata</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -23,7 +23,7 @@
           <li class="nav-item"
               [routerLinkActive]="['link-active']"
               [routerLinkActiveOptions]="{ exact: true }">
-            <a class="nav-link" [routerLink]="['/']">Acasa</a>
+            <a class="nav-link" [routerLink]="['/traseu']">Acasa</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
             <a class="nav-link" [routerLink]="['/dificultate']">Dificultate</a>
@@ -32,7 +32,10 @@
             <a class="nav-link" [routerLink]="['/cerinte']">Cerinte</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link" [routerLink]="['/Inchiriere']">Inchiriere</a>
+            <a class="nav-link" [routerLink]="['/inchiriere']">Inchiriere</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link" [routerLink]="['/experienta']">Experienta</a>
           </li>
         </ul>
       </div>

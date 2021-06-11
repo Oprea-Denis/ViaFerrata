@@ -1,0 +1,40 @@
+<h1 id="tableLabel">Add experienta</h1>
+
+<style>
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: darkslateblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+    input[type=submit]:hover {
+      opacity: 0.8;
+    }
+</style>
+
+<form>
+  <label for="nume">Nume</label>
+  <input [(ngModel)]="experienta.nume" type="text" id="nume" name="nume" placeholder="Nume..">
+  <label for="varsta">Varsta</label>
+  <input [(ngModel)]="experienta.varsta" type="text" id="varsta" name="varsta" placeholder="Varsta..">
+  <label for="traseeParcurse">Trasee Parcurse</label>
+  <input [(ngModel)]="experienta.traseeParcurse" type="text" id="traseeParcurse" name="traseeParcurse" placeholder="Trasee Parcurse..">
+  <label for="dificultate">Dificultate</label>
+  <input [(ngModel)]="experienta.dificultate" type="text" id="dificultate" name="dificultate" placeholder="Dificultate..">
+  <input (click)="saveExperienta()" type="submit" value="Salveaza experienta">
+</form>

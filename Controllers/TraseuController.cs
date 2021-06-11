@@ -21,23 +21,6 @@ namespace ViaFerrata.Controllers
             _context = context;
         }
 
-        //private static List<Traseu> trasee = new List<Traseu>()
-        //{
-        //    new Traseu() { ID = Guid.NewGuid(), NumeSiLocatie = "Astragalus, Cheile Sugaului-Munticelu, judetul Neamt", Dificultate = "A/B, C, C/D", Durata = "traseu principal, 1h30min - 2h30min", Taxa = "Gratuit" },
-        //    new Traseu() { ID = Guid.NewGuid(), NumeSiLocatie = "Wild Ferenc, Lacul Rosu, judetul Harghita", Dificultate = "C/D", Durata = "50min", Taxa = "Gratuit"},
-        //    new Traseu() { ID = Guid.NewGuid(), NumeSiLocatie = "White Wolf, Pestera Muierilor, Cheile Galbenului, Baia de Fier, judetul Gorj", Dificultate = "B, C, D", Durata = "traseu principal, 1h30min", Taxa = "Gratuit"},
-        //    new Traseu() { ID = Guid.NewGuid(), NumeSiLocatie = "Cheile Rasnoavei, judetul Brasov", Dificultate = "C/D", Durata = "2h", Taxa = "15RON"},
-        //    new Traseu() { ID = Guid.NewGuid(), NumeSiLocatie = "Sky Fly, Grota lui Hili, Cheile Turzii, judetul Cluj", Dificultate = "C", Durata = "40min", Taxa = "15RON"}
-        //};
-
-        // GET: api/Traseu
-        //[HttpGet]
-        //public Traseu[] Get()
-        //{
-        //    return trasee.ToArray();
-        //}
-
-        // GET: api/Traseu/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Traseu>> GetTraseu(Guid id)
         {
@@ -50,9 +33,6 @@ namespace ViaFerrata.Controllers
 
             return traseu;
         }
-
-
-        // PUT: api/Traseu/5
 
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTraseu(Guid id, Traseu traseu)
@@ -83,17 +63,6 @@ namespace ViaFerrata.Controllers
             return NoContent();
         }
 
-        // POST: api/Traseu
-        //[HttpPost]
-        //public void Post([FromBody] Traseu traseu)
-        //{
-        //    if (traseu.ID == Guid.Empty)
-        //        traseu.ID = Guid.NewGuid();
-
-        //    trasee.Add(traseu);
-        //}
-
-       // DELETE: api/Traseu/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTraseu(Guid id)
         {
@@ -113,11 +82,5 @@ namespace ViaFerrata.Controllers
         {
             return _context.Traseu.Any(e => e.ID == id);
         }
-
-        //[HttpDelete]
-        //public void Delete(Guid id)
-        //{
-        //    trasee.RemoveAll(traseu => traseu.ID == id);
-        //}
     }
 }
